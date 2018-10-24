@@ -1,21 +1,15 @@
-<?= form_open('cursos/recibirdatos');
-   $nombre = array('name' => 'nameCurso',
-  'placeholder' => 'Escribe tu nombre:');
+<?= form_open('codigofacilito/recibirdatos');?>
+   <div class="form-group">
+    <label for="Name">Nombre curso:</label>
+    <input type="text" class="form-control" name="nameCurso">
+  </div>
+  <div class="form-group">
+    <label for="videosNumber">número de videos</label>
+    <input type="text" class="form-control" id="pwd" name="videosNumber">
+  </div>
+  <button type="submit" class="btn btn-primary">Emviar datos</button>
 
-  $videos = array('name' => 'videosNumber',
-  'placeholder' => 'Cantidad videos del curso');
-
-  echo form_label('Nombre :', 'name');
-  echo form_input($nombre);
-  echo "<br><br>";
-  echo form_label('Vídeos :', 'vídeos');
-  echo form_input($videos);
-  $buton = array('type' => 'submit', 'value'=> 'Submit');
-  echo form_submit($buton);
-  echo form_close();
-
-
-?>
+<?= form_close();?>
   
  
  

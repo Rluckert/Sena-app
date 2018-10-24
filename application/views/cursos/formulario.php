@@ -1,21 +1,23 @@
-<?= form_open('codigofacilito/recibirdatos');
-   $nombre = array('name' => 'nameCurso',
-  'placeholder' => 'Escribe tu nombre:');
-
-  $videos = array('name' => 'videosNumber',
-  'placeholder' => 'Cantidad videos del curso');
-
-  echo form_label('Nombre :', 'name');
-  echo form_input($nombre);
-  echo "<br><br>";
-  echo form_label('Vídeos :', 'vídeos');
-  echo form_input($videos);
-  $buton = array('type' => 'submit', 'value'=> 'Submit');
-  echo form_submit($buton);
-  echo form_close();
-
-
+<?php
+$attributes = array('class' => 'form-horizontal');
+echo form_open('cursos/recibirdatos', $attributes);
 ?>
+   <div class="form-group">
+    <label for="Name">Nombre curso:</label>
+    <input type="text" class="form-control" name="nameCurso">
+  </div>
+  <div class="form-group">
+    <label for="videosNumber">Número de videos</label>
+   <input type="text" class="form-control" id="pwd" name="videosNumber">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar datos</button>
+
+<?= form_close();?>
+
+
+
+
+
   
  
  
